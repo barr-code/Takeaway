@@ -14,4 +14,12 @@ class Menu
 		@dishes.any? == true
 	end
 
+	def item_count
+		@dishes.count
+	end
+
+	def display_menu
+		@dishes
+	end
+
 end
