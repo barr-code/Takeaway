@@ -27,3 +27,10 @@ Change into the directory.
 ```
   $ rspec
 ```
+
+### What I Learned
+The Takeaway challenge really helped to cement my understanding of using [rspec doubles](https://github.com/rspec/rspec-mocks) in testing.
+
+This was my first exposure to using Ruby gems and helped me to get my head around using an API in my code.
+
+Rewriting the Inject method taught me about yielding to blocks within a method and helped me to understand the logic behind a powerful and widely used Ruby method.
