@@ -7,10 +7,6 @@ class LineItem
 		@quantity = quantity
 	end
 
-	def dish
-		@dish
-	end
-
 	def line_total
 		dish.price * quantity
 	end

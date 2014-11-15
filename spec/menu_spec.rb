@@ -11,12 +11,12 @@ describe Menu do
 
 	it "should be able to add new dishes" do
 		menu.add_dish(dish)
-		expect(menu).to have_dishes
+		expect(menu.dishes.any?).to be true
 	end
 
 	it "should know how many dishes it has" do
 		5.times {menu.add_dish(dish)}
-		expect(menu.item_count).to eq(5)
+		expect(menu.dishes.count).to eq(5)
 	end
 
 	it "should display a list of dishes" do

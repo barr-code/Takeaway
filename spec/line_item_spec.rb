@@ -13,8 +13,13 @@ describe LineItem do
 		expect(lineitem.quantity).to eq(1)
 	end
 
+	it "can accept multiples of one dish on a line" do
+		burgers = LineItem.new(dish, 7)
+		expect(burgers.quantity).to eq(7)
+	end
+
+
 	it "should calculate a line total" do
-		allow(dish).to receive(:price).and_return(3.0)
 		pizza = LineItem.new(dish, 5)
 		expect(pizza.line_total).to eq(15)
 	end

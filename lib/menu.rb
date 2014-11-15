@@ -10,14 +10,6 @@ class Menu
 		@dishes << dish
 	end
 
-	def has_dishes?
-		@dishes.any? == true
-	end
-
-	def item_count
-		@dishes.count
-	end
-
 	def display_menu
 		@dishes
 	end

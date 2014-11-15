@@ -1,6 +1,10 @@
 class Array
 
 	def injection(args = nil)
-		args == nil ? accumulator = self.first : accumulator = args
-		self.each {|accumulator, element| }
+		arr = self.dup
+		args == nil ? accumulator = arr.shift : accumulator = args
+		arr.each {|element| accumulator = yield(accumulator, element)}
+		
+		accumulator
+	end
 end

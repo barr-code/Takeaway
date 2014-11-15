@@ -1,19 +1,21 @@
-require './lib/sms.rb'
+require './lib/text_message_sender.rb'
 
 class Takeaway
 
-	attr_accessor :customer, :order
+	attr_accessor :customer, :customer_number, :order
 
-	def initialize(customer)
+	def initialize(customer, customer_number, message_sender = TextMessageSender.new )
 		@customer = customer
+		@customer_number = customer_number
+		@message_sender = message_sender
 	end
 
 	def customer_order(order)
 		@order = Order.new
 	end
 
-	def send_message
-		message = Message.new(confirmation).send_sms
+	def send_confirmation
+		@message_sender.send_sms(confirmation,customer_number)
 	end
 
 	def confirmation

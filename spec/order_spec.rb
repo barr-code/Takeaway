@@ -9,6 +9,10 @@ describe Order do
 		expect(order.line_items.class).to eq(Array)
 	end
 
+	it "should have a default order total of 0" do 
+		expect(order.order_total).to eq(0)
+	end
+
 	it "should be able to add new line items to the list" do
 		expect{order.add_line_item(line_item)}.to change{order.line_items.count}.by(1)
 	end
